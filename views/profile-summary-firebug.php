@@ -3,7 +3,7 @@
 /*<![CDATA[*/
 if(typeof(console)=='object')
 {
-	console.group("DB Profiling Summary Report (Query count: <?php echo $queryCount?>, Total query time: <?php echo sprintf('%0.5f',$queryTime)?>s)");
+	console.<?php echo $this->collapsedInFireBug ? 'groupCollapsed' : 'group'; ?>("DB Profiling Summary Report (Query count: <?php echo $queryCount?>, Total query time: <?php echo sprintf('%0.5f',$queryTime)?>s)");
 	console.log(" count   total   average    min      max   ");
 <?php
 foreach($data as $index=>$entry)
